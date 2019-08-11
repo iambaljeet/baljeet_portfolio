@@ -18,5 +18,8 @@ const subHeadingTextStyle = TextStyle(
     fontWeight: FontWeight.bold,
     fontFamily: 'Monda');
 
+const linksButtonStyle =
+    TextStyle(fontSize: 10.0, color: Colors.black, fontFamily: 'Monda');
+
 const bottomFooterTextStyle =
     TextStyle(fontSize: 10.0, color: Colors.black, fontFamily: 'Monda');

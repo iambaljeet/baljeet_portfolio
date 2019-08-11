@@ -114,6 +114,21 @@ class MyHomePage extends StatelessWidget {
                                                   ? 18
                                                   : 12),
                                     ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    FlatButton(
+                                        onPressed: () => {
+                                              html.window.open(
+                                                  'https://drive.google.com/open?id=1Ysf0zRhVKBCrYcyTXWjZ_VbZZ8bkAgoa',
+                                                  'Resume')
+                                            },
+                                        color: Colors.blue,
+                                        child: Text(
+                                          'Resume',
+                                          style: linksButtonStyle.copyWith(
+                                              color: Colors.white),
+                                        ))
                                   ],
                                 ),
                               )
@@ -163,6 +178,9 @@ class MyHomePage extends StatelessWidget {
 Widget bottomButtonsWidget(String text, String url) {
   return InkWell(
     onTap: () => {html.window.open(url, text)},
-    child: Text(text),
+    child: Text(
+      text,
+      style: linksButtonStyle,
+    ),
   );
 }
