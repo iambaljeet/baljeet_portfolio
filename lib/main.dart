@@ -8,7 +8,6 @@ import 'package:flutter_web/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,6 +19,33 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
+  List<Widget> myLinks() => [
+        bottomButtonsWidget('Github', 'https://github.com/iambaljeet'),
+        SizedBox(
+          width: 10,
+        ),
+        bottomButtonsWidget('AngelList', 'https://angel.co/imbaljeet'),
+        SizedBox(
+          width: 10,
+        ),
+        bottomButtonsWidget(
+            'Linkedin', 'https://www.linkedin.com/in/baljeet-singh-402303116/'),
+        SizedBox(
+          width: 10,
+        ),
+        bottomButtonsWidget('Twitter', 'https://twitter.com/baljeet_dev'),
+        SizedBox(
+          width: 10,
+        ),
+        bottomButtonsWidget(
+            'Facebook', 'https://www.facebook.com/ibaljeetsingh'),
+        SizedBox(
+          width: 10,
+        ),
+        bottomButtonsWidget(
+            'Instagram', 'https://www.instagram.com/iam.baljeet/'),
+      ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,8 +106,8 @@ class MyHomePage extends StatelessWidget {
                                                   : 18),
                                     ),
                                     Text(
-                                      'An Android Application Developer From Gurugram, India',
-                                      style: paragraphTextStyle.copyWith(
+                                      'Software Engineer and Mobile Application Developer in Gurgaon, Haryana, India',
+                                      style: subHeadingTextStyle.copyWith(
                                           fontSize:
                                               ResponsiveLayout.isLargeScreen(
                                                       context)
@@ -97,30 +123,7 @@ class MyHomePage extends StatelessWidget {
                             height: 40,
                           ),
                           Wrap(
-                            children: <Widget>[
-                              bottomButtonsWidget(
-                                  'Github', 'https://github.com/iambaljeet'),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              bottomButtonsWidget('Linkedin',
-                                  'https://www.linkedin.com/in/baljeet-singh-402303116/'),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              bottomButtonsWidget(
-                                  'Twitter', 'https://twitter.com/baljeet_dev'),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              bottomButtonsWidget('Facebook',
-                                  'https://www.facebook.com/ibaljeetsingh'),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              bottomButtonsWidget('Instagram',
-                                  'https://www.instagram.com/iam.baljeet/'),
-                            ],
+                            children: myLinks(),
                           ),
                         ],
                       )
