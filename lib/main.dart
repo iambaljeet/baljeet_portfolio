@@ -1,3 +1,5 @@
+import 'dart:html' as html;
+
 import 'package:baljeet_portfolio/responsiveLayout.dart';
 import 'package:baljeet_portfolio/styles.dart';
 import 'package:flutter_web/cupertino.dart';
@@ -27,112 +29,137 @@ class MyHomePage extends StatelessWidget {
         child: Container(
           color: Colors.white,
           padding: EdgeInsets.all(8.0),
-          child: Center(
-            child: ListView(
-              shrinkWrap: true,
-              children: <Widget>[
-                Column(
-                  children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        SizedBox(
-                          height: ResponsiveLayout.isLargeScreen(context)
-                              ? 200
-                              : 100,
-                          width: ResponsiveLayout.isLargeScreen(context)
-                              ? 200
-                              : 100,
-                          child: CircleAvatar(
-                            backgroundImage: AssetImage('images/my_image.jpg'),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 40,
-                        ),
-                        Flexible(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+          child: Column(
+            children: <Widget>[
+              Expanded(
+                child: Center(
+                  child: ListView(
+                    shrinkWrap: true,
+                    children: <Widget>[
+                      Column(
+                        children: <Widget>[
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
-                              Text(
-                                'Hello',
-                                style: titleTextStyle.copyWith(
-                                    fontSize:
-                                        ResponsiveLayout.isLargeScreen(context)
-                                            ? 28
-                                            : 22),
+                              SizedBox(
+                                height: ResponsiveLayout.isLargeScreen(context)
+                                    ? 200
+                                    : 100,
+                                width: ResponsiveLayout.isLargeScreen(context)
+                                    ? 200
+                                    : 100,
+                                child: CircleAvatar(
+                                  backgroundImage:
+                                      AssetImage('images/my_image.jpg'),
+                                ),
                               ),
-                              Text(
-                                'I\'m Baljeet Singh',
-                                style: titleNameStyle.copyWith(
-                                    fontSize:
-                                        ResponsiveLayout.isLargeScreen(context)
-                                            ? 24
-                                            : 18),
+                              SizedBox(
+                                width: 40,
                               ),
-                              Text(
-                                'An Android Application Developer From Gurugram, India',
-                                style: paragraphTextStyle.copyWith(
-                                    fontSize:
-                                        ResponsiveLayout.isLargeScreen(context)
-                                            ? 18
-                                            : 12),
-                              ),
+                              Flexible(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      'Hello',
+                                      style: titleTextStyle.copyWith(
+                                          fontSize:
+                                              ResponsiveLayout.isLargeScreen(
+                                                      context)
+                                                  ? 28
+                                                  : 22),
+                                    ),
+                                    Text(
+                                      'I\'m Baljeet Singh',
+                                      style: titleNameStyle.copyWith(
+                                          fontSize:
+                                              ResponsiveLayout.isLargeScreen(
+                                                      context)
+                                                  ? 24
+                                                  : 18),
+                                    ),
+                                    Text(
+                                      'An Android Application Developer From Gurugram, India',
+                                      style: paragraphTextStyle.copyWith(
+                                          fontSize:
+                                              ResponsiveLayout.isLargeScreen(
+                                                      context)
+                                                  ? 18
+                                                  : 12),
+                                    ),
+                                  ],
+                                ),
+                              )
                             ],
                           ),
-                        )
-                      ],
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Wrap(
+                            children: <Widget>[
+                              bottomButtonsWidget(
+                                  'Github', 'https://github.com/iambaljeet'),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              bottomButtonsWidget('Linkedin',
+                                  'https://www.linkedin.com/in/baljeet-singh-402303116/'),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              bottomButtonsWidget(
+                                  'Twitter', 'https://twitter.com/baljeet_dev'),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              bottomButtonsWidget('Facebook',
+                                  'https://www.facebook.com/ibaljeetsingh'),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              bottomButtonsWidget('Instagram',
+                                  'https://www.instagram.com/iam.baljeet/'),
+                            ],
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'Made with ❤️ in Flutter',
+                        style: bottomFooterTextStyle,
+                      ),
                     ),
-                    SizedBox(
-                      height: 40,
-                    ),
-                    Wrap(
-                      children: <Widget>[
-                        InkWell(
-                          onTap: () => {},
-                          child: Text('Github'),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        InkWell(
-                          onTap: () => {},
-                          child: Text('Linkedin'),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        InkWell(
-                          onTap: () => {},
-                          child: Text('Twitter'),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        InkWell(
-                          onTap: () => {},
-                          child: Text('Facebook'),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        InkWell(
-                          onTap: () => {},
-                          child: Text('Instagram'),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+                      child: Text(
+                        'By Baljeet Singh',
+                        style: bottomFooterTextStyle,
+                      ),
                     ),
                   ],
-                )
-              ],
-            ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
     );
   }
+}
+
+Widget bottomButtonsWidget(String text, String url) {
+  return InkWell(
+    onTap: () => {html.window.open(url, text)},
+    child: Text(text),
+  );
 }

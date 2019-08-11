@@ -17,3 +17,6 @@ const paragraphTextStyle =
 
 const tabsButtonStyle =
     TextStyle(fontSize: 14.0, color: Colors.white, fontFamily: 'Monda');
+
+const bottomFooterTextStyle =
+    TextStyle(fontSize: 10.0, color: Colors.black, fontFamily: 'Monda');
