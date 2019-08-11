@@ -1,0 +1,67 @@
+[
+  {
+    "family": "Lato",
+    "fonts": [
+      {
+        "asset": "fonts/Lato-Regular.ttf"
+      }
+    ]
+  },
+  {
+    "family": "Pacifico",
+    "fonts": [
+      {
+        "asset": "fonts/Pacifico-Regular.ttf"
+      }
+    ]
+  },
+  {
+    "family": "MaterialIcons",
+    "fonts": [
+      {
+        "asset" : "fonts/MaterialIcons-Regular.ttf"
+      }
+    ]
+  },
+  {
+    "family": "SocialMedia",
+    "fonts": [
+      {
+        "asset" : "fonts/social_media.ttf"
+      }
+    ]
+  },
+  {
+    "family": "Montserrat",
+    "fonts": [
+
+      {
+        "asset": "fonts/Montserrat-Regular.ttf"
+      }
+    ]
+  },
+  {
+    "family": "RedHatDisplay",
+    "fonts": [
+      {
+        "asset": "fonts/RedHatDisplay-Regular.ttf"
+      }
+    ]
+  },
+  {
+    "family": "Righteous",
+    "fonts": [
+      {
+        "asset": "fonts/Righteous-Regular.ttf"
+      }
+    ]
+  },
+  {
+    "family": "Monda",
+    "fonts": [
+      {
+        "asset": "fonts/Monda-Regular.ttf"
+      }
+    ]
+  }
+]
